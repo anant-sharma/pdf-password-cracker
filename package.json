@@ -1,24 +1,24 @@
 {
-  "name": "node-boilerplate",
+  "name": "pdf-password-cracker",
   "version": "1.0.0",
-  "description": "Boilerplate for nodejs applications",
+  "description": "PDF Password cracker using Bruteforce",
   "main": "src/index.js",
   "scripts": {
-    "build": "./node_modules/typescript/bin/tsc",
+    "build": "./node_modules/typescript/bin/tsc -p ./",
     "lint": "./node_modules/tslint/bin/tslint -c ./tslint.json --fix --project ./tsconfig.json",
     "start": "npm run build && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anant-sharma/node-boilerplate.git"
+    "url": "git+https://github.com/anant-sharma/pdf-password-cracker.git"
   },
   "author": "Anant Sharma <anantatnet@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anant-sharma/node-boilerplate/issues"
+    "url": "https://github.com/anant-sharma/pdf-password-cracker/issues"
   },
-  "homepage": "https://github.com/anant-sharma/node-boilerplate#readme",
+  "homepage": "https://github.com/anant-sharma/pdf-password-cracker#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
