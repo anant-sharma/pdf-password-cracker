@@ -18,12 +18,13 @@ export class Pdf {
         } = data;
 
         const passwordSet = maskedDataSetGenerator(mask);
-
-        console.info(`[**] Trying ${passwordSet.length} possibilities to decrypt ${filepath}`);
+        const passwordSetLength = passwordSet.length;
 
         return new Promise(async (resolve, reject) => {
             let response: any = null;
+            let tryIndex = 0;
             for (const password of passwordSet) {
+                console.info(`[**] Trying ${++tryIndex} out of ${passwordSetLength} possibilities to decrypt ${filepath}`);
                 try {
                     response = await this.decryptExec(password, filepath);
                     resolve(response);
