@@ -34,7 +34,6 @@ router.post('/decrypt', async (req: express.Request, res: express.Response) => {
             filepath: file,
             mask
         });
-        console.dir(decrypted);
         res.status(200).json({
             decrypted,
         });
