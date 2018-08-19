@@ -20,10 +20,11 @@ export class Pdf {
         const passwordSet = maskedDataSetGenerator(mask);
 
         return new Promise(async (resolve, reject) => {
-            for (let i = 0; i < passwordSet.length; i++) {
-                this.decryptExec(passwordSet[i], filepath).then((response) => {
+            for (const password of passwordSet) {
+                try {
+                    const response = await this.decryptExec(password, filepath);
                     resolve(response);
-                }, (error: Error) => {});
+                } catch (e) {}
             }
         });
     }
